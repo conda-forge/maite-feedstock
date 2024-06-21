@@ -25,15 +25,26 @@ requirements:
     - python >=3.8
     - typing-extensions >=4.5,!=4.6
     - numpy >=1.17
-    - pytorch >=1.7,!=1.12.0
+  run_constrained:
+    - pytorch>=1.7,!=1.12.0
 
 test:
   imports:
     - maite
-  commands:
-    - pip check
   requires:
     - pip
+    - jupytext >= 1.14.0
+    - numpydoc >= 1.5.0
+    - pyright >= 1.1.280
+    - pytest >= 7.0.0
+    - hypothesis >= 6.61.0
+    - pytest-mock >= 3.10.0
+    - pytorch>=1.7,!=1.12.0
+  source_files:
+    - tests
+  commands:
+    - pip check
+    - pytest tests
 
 about:
   home: https://github.com/mit-ll-ai-technology/maite
