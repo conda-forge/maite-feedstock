@@ -1,13 +1,13 @@
 {% set name = "maite" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/maite-{{ version }}.tar.gz
-  sha256: ea00f55d75c0fa853900d36f71bfb851fba6f27cb84acefab40b1c5fceccfa88
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/maite-{{ version }}.tar.gz
+  sha256: dc76aebf1fb32e6145901e8e99a789796035cf2a4385f87f4b76feea8f10c793
 
 build:
   noarch: python
