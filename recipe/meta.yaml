@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >={{ python_min }}
     - setuptools >=35.0.2
     - wheel >=0.29.0
     - setuptools-scm ==7.0.5
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - typing-extensions >=4.5,!=4.6
     - numpy >=1.24,<2
   run_constrained:
