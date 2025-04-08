@@ -1,13 +1,13 @@
 {% set name = "maite" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/maite-{{ version }}.tar.gz
-  sha256: ea00f55d75c0fa853900d36f71bfb851fba6f27cb84acefab40b1c5fceccfa88
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/maite-{{ version }}.tar.gz
+  sha256: dc76aebf1fb32e6145901e8e99a789796035cf2a4385f87f4b76feea8f10c793
 
 build:
   noarch: python
@@ -16,30 +16,30 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >={{ python_min }}
     - setuptools >=35.0.2
     - wheel >=0.29.0
     - setuptools-scm ==7.0.5
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - typing-extensions >=4.5,!=4.6
     - numpy >=1.24,<2
   run_constrained:
     - pytorch >=1.7,!=1.12.0
-    - pyright >=1.1.280,<=1.1.320
+    - pyright >=1.1.280
 
 test:
   imports:
     - maite
   requires:
     - pip
-    - jupytext >= 1.14.0
-    - numpydoc >= 1.5.0
-    - pyright >= 1.1.280,<=1.1.320
-    - pytest >= 7.0.0
-    - hypothesis >= 6.61.0,<=6.113
-    - pytest-mock >= 3.10.0
+    - jupytext >=1.14.0
+    - numpydoc >=1.5.0
+    - pyright >=1.1.280
+    - pytest >=7.0.0
+    - hypothesis >=6.61.0,<=6.113
+    - pytest-mock >=3.10.0
     - pytorch >=1.7,!=1.12.0
   source_files:
     - tests
