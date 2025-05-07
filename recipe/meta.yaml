@@ -19,6 +19,7 @@ requirements:
     - python >={{ python_min }}
     - poetry-core >=2.0.0,<3.0.0
     - poetry-dynamic-versioning >=1.0.0,<2.0.0
+    - pip
   run:
     - python >={{ python_min }}
     - typing-extensions >=4.5,!=4.6
