@@ -149,6 +149,3 @@ Feedstock Maintainers
 * [@leihamilton](https://github.com/leihamilton/)
 * [@myeesw](https://github.com/myeesw/)
 
-
-<!-- dummy commit to enable rerendering -->
-
