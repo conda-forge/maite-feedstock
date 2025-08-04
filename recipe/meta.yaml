@@ -1,5 +1,5 @@
 {% set name = "maite" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/maite-{{ version }}.tar.gz
-  sha256: f6b9462405d5f3eda2a8328eef9a34074a321697285e41af562fd036353e00c9
+  sha256: eefe1cbb86de96de4bbccbddd74f11daf8b61f5033b198ba1fb67b57878ad5ac
 
 build:
   noarch: python
@@ -23,10 +23,10 @@ requirements:
   run:
     - python >={{ python_min }}
     - typing-extensions >=4.5,!=4.6
-    - numpy >=1.24,<2
+    - numpy >=1.24
   run_constrained:
     - pytorch >=1.7,!=1.12.0
-    - pyright >=1.1.280
+    - pyright >=1.1.280,!=1.1.401
 
 test:
   imports:
