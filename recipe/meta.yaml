@@ -1,5 +1,5 @@
 {% set name = "maite" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/maite-{{ version }}.tar.gz
-  sha256: 002cd05302d55b1e3be6542b01fce671e8a85be700377b1f28bb703ef9995969
+  sha256: 1b98c729459ff854878ff8c1f76636e359414b0699ff64800c88e4c516a1174f
 
 build:
   noarch: python
