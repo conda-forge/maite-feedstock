@@ -46,6 +46,7 @@ test:
   source_files:
     - tests
     - pyproject.toml
+    - docs
   commands:
     - pip check
     - pytest tests
