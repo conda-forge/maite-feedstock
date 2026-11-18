@@ -1,13 +1,13 @@
 {% set name = "maite" %}
-{% set version = "0.10.3" %}
+{% set version = "0.10.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/maite-{{ version }}.tar.gz
-  sha256: 0b7eb2854d22b98ee391062e239777c539e26c9bdd430c25efc575009261f9c6
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/maite-{{ version }}.tar.gz
+  sha256: fe9d5f1175a52cd3a0d26411dba438940200384037384c9781eddd72832b89a1
 
 build:
   noarch: python
@@ -17,13 +17,13 @@ build:
 requirements:
   host:
     - python >={{ python_min }}
-    - poetry-core >=2.0.0,<3.0.0
-    - poetry-dynamic-versioning >=1.0.0,<2.0.0
+    - hatchling
+    - hatch-vcs
     - pip
   run:
     - python >={{ python_min }}
     - typing-extensions >=4.5,!=4.6
-    - numpy >=1.24
+    - numpy >=1.24.2
   run_constrained:
     - pytorch >=1.7,!=1.12.0
     - pyright >=1.1.280,!=1.1.401
@@ -46,6 +46,7 @@ test:
   source_files:
     - tests
     - pyproject.toml
+    - docs
   commands:
     - pip check
     - pytest tests
